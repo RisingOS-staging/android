@@ -18,7 +18,7 @@ Getting Started
 ---------------
 **Initialize local repository**
 ```bash
-repo init -u https://github.com/RisingOS-staging/android -b fourteen --git-lfs
+repo init -u git@github.com:RisingOS-staging/android.git -b fourteen --git-lfs
 ```
 
 **Sync up with this command:**
@@ -52,6 +52,8 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 Building Flags
 ---------------
 ```bash
+# Please note that both maintainer flags are required
+
 # friendly tip: builders can use vendor init_xxx.cpp as workaround for spacing
 # e.g. property_override("ro.rising.chipset", "Snapdragon 870 5G");
 RISING_CHIPSET="Google Tensor 2"
@@ -60,7 +62,7 @@ RISING_CHIPSET="Google Tensor 2"
 # e.g. property_override("ro.rising.maintainer", "maintainer");
 RISING_MAINTAINER="Niv"
 
-#In rising_<device>.mk Add the following properties to `PRODUCT_BUILD_PROP_OVERRIDES`
+#In lineage_<device>.mk Add the following properties to `PRODUCT_BUILD_PROP_OVERRIDES`
 
 example:
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -69,7 +71,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # chipset flag enclose var with "" if more than one
 # this will reflect on build/display version, a firmware package/zip name 
-# e.g. risingOS-2.1-COMMUNITY-device-AOSP.zip - AOSP is the default package type, WITH_GMS will override the package type to PIXEL
+# e.g. RisingOS-4.0-COMMUNITY-device-AOSP.zip - AOSP is the default package type, WITH_GMS will override the package type to PIXEL
 RISING_PACKAGE_TYPE := "VANILLA_AOSP"
 
 # disable/enable blur support, default is false
