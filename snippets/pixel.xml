@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote name="muppets"
+          fetch="https://github.com/TheMuppets/"
+          sync-c="true"
+          sync-j="4"
+          revision="refs/heads/lineage-21" />
+
+  <remote name="mnri"
+          fetch="https://github.com/minaripenguin/"
+          sync-c="true"
+          sync-j="4"
+          revision="refs/heads/fourteen" />
+
   <!-- Pixel 6/6 Pro -->
   <remote name="aosp-raviole" fetch="https://android.googlesource.com" review="android-review.googlesource.com" revision="refs/tags/android-14.0.0_r52" clone-depth="1" />
   <!-- Pixel 6a -->
@@ -20,4 +32,17 @@
   <!-- Pixel 8a -->
   <remote name="aosp-akita" fetch="https://android.googlesource.com" review="android-review.googlesource.com" revision="refs/tags/android-14.0.0_r53" clone-depth="1" />
 
+  <!-- GS101/GS201 -->
+  <project path="device/google/raviole" name="android_device_google_raviole" remote="mnri" groups="device,slider,pdk-gs-arm" />
+  <project path="device/google/pantah" name="android_device_google_pantah" remote="mnri" />
+  <project path="device/google/gs101" name="android_device_google_gs101" remote="mnri" groups="device,slider,bluejay,pdk-gs-arm" />
+  <project path="device/google/gs201" name="android_device_google_gs201" remote="mnri" />
+  
+  <!-- GS101/GS201 common/vendor -->
+  <project path="device/google/gs-common" name="LineageOS/android_device_google_gs-common" revision="lineage-21"/>
+  <project path="vendor/google/cheetah" name="proprietary_vendor_google_cheetah" remote="muppets" />
+
+  <!-- GS101/GS201 kernels -->
+  <project path="device/google/raviole-kernel" name="device/google/raviole-kernel" remote="aosp-raviole" revision="refs/tags/android-14.0.0_r50" clone-depth="1" />
+  <project path="device/google/pantah-kernel" name="device/google/pantah-kernel" remote="aosp-pantah" revision="refs/tags/android-14.0.0_r50" clone-depth="1" />
 </manifest>

@@ -18,7 +18,7 @@ Getting Started
 ---------------
 **Initialize local repository**
 ```bash
-repo init -u https://github.com/RisingOS-staging/android -b fourteen --git-lfs
+repo init -u https://github.com/RisingOS-staging/android -b oriole --git-lfs
 ```
 
 **Sync up with this command:**
