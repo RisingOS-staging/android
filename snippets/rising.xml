@@ -51,7 +51,6 @@
   <remove-project path="packages/apps/GameSpace" />
   <remove-project path="packages/apps/Launcher3" />
   <remove-project path="packages/apps/LineageParts" />
-  <remove-project path="packages/apps/Jelly" />
   <remove-project path="packages/apps/OmniStyle" />
   <remove-project path="packages/apps/Settings" />
   <remove-project path="packages/apps/SetupWizard" />
