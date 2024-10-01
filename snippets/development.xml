@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="mnri"
+          fetch="https://github.com/minaripenguin/"
+          sync-c="true"
+          sync-j="4"
+          revision="refs/heads/fifteen" />
+          
+  <remote name="nabu-gitlab"
+          fetch="https://gitlab.com/dev-harsh1998/"
+          sync-c="true"
+          sync-j="4"
+          revision="refs/heads/lineage-21" />
+
+  <project path="hardware/xiaomi" name="LineageOS/android_hardware_xiaomi" revision="lineage-21" />
+  <project path="device/xiaomi/nabu" name="android_device_xiaomi_nabu" remote="mnri" />
+  <project path="kernel/xiaomi/nabu" name="android_kernel_xiaomi_nabu" remote="mnri" />
+  <project path="vendor/xiaomi/nabu" name="android_vendor_xiaomi_nabu" remote="nabu-gitlab" />
+
+</manifest>
